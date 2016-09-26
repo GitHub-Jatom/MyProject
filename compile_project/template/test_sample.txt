@@ -1,0 +1,50 @@
+Stategy T1: {
+    return 1;
+}
+
+Stategy T2: {
+    i = RANDOM(3);
+    if (i == 3){
+        return 0;
+    }
+    else{
+        return 1;
+    }
+}
+
+Stategy T3:{
+    if (CUR == 1){
+        return 1;
+    }
+    else{
+        return B[CUR-1];
+    }
+}
+    
+Stategy T4:{
+    if (CUR == 1){
+        return 1;
+    }
+    else {
+        i = RANDOM(9);
+        if (i == 9){
+            return 0;
+        }
+        else{
+            return B[CUR-1];
+        }
+    }
+}
+
+        
+Stategy T5:{
+    i = 1;
+    k = 1;
+    while ((k < CUR) && (i == 1)) {
+        if (B[k] == 0){
+            i = 0;
+        }
+        k = k + 1;
+    }
+    return i;
+}

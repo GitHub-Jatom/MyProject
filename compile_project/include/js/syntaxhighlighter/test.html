@@ -1,0 +1,83 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SyntaxHighlighter Build Test Page</title>
+	<script type="text/javascript" src="scripts/shCore.js"></script>
+	<script type="text/javascript" src="scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="scripts/shBrushCSharp.js"></script>
+	<script type="text/javascript" src="scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="scripts/shBrushDelphi.js"></script>
+	<script type="text/javascript" src="scripts/shBrushDiff.js"></script>
+	<script type="text/javascript" src="scripts/shBrushGroovy.js"></script>
+	<script type="text/javascript" src="scripts/shBrushJava.js"></script>
+	<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="scripts/shBrushPhp.js"></script>
+	<script type="text/javascript" src="scripts/shBrushPlain.js"></script>
+	<script type="text/javascript" src="scripts/shBrushPython.js"></script>
+	<script type="text/javascript" src="scripts/shBrushRuby.js"></script>
+	<script type="text/javascript" src="scripts/shBrushScala.js"></script>
+	<script type="text/javascript" src="scripts/shBrushSql.js"></script>
+	<script type="text/javascript" src="scripts/shBrushVb.js"></script>
+	<script type="text/javascript" src="scripts/shBrushXml.js"></script>
+	<link type="text/css" rel="stylesheet" href="styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="styles/shThemeDefault.css"/>
+	<script type="application/javascript" src="../jquery/jquery-1.7.2.min.js"> </script>
+	<script>
+		$(document).ready(function () {
+			var i =1;
+//			$("#my_content").html('class \n public; private protected friend mutable explicit this');
+			$("#testContent").die('click').live('click', function (event) {
+//				var value  = $("#testContent").val();
+				if(i==1) {
+					var d = document.getElementById('testContent');
+					var html = [];
+					var content = '<pre class="brush: c-sharp;toolbar:false;">' + "caijiatong\n zheshiwomendedaima" + '</pre>';
+//				html.push('<pre class="brush: c-sharp;toolbar:false;">');
+//				html.push('function helloSyntaxHighlighter()\n');
+//				html.push('{\n  return "hi!";\n}');
+					html.push(content);
+					d.innerHTML = html.join('');
+					SyntaxHighlighter.highlight();
+					i=0;
+				}else{
+					$("#testContent").html("hhh");
+					i=1;
+				}
+
+//			var text = document.getElementById("my_content").textContent;
+//			alert(value);
+//				$("#my_content").html("return");
+//				SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+//				SyntaxHighlighter.all();
+//			$("#text_id").text( value);
+			})
+
+//			$("#text_id").live('click',function (message) {
+//				if(i==1) {
+//					$("#my_content").hide();
+//
+//				}else{
+//					$("pre").show();
+//				}
+//			})
+		})
+	</script>
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+//		SyntaxHighlighter.all();
+	</script>
+</head>
+
+<body>
+<h1>SyntaxHihglighter Test</h1>
+<p id = "ppp">This is a test file to insure that everything is working well.</p>
+
+<div id="testContent" style="width: 300px;height: 200px;" >aaaa
+</div>
+<!--<pre class="brush: c-sharp;" id="my_content">-->
+<!--function-->
+<!--</pre>-->
+</body>
+</html>
+
